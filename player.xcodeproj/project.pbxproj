@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27580F7B16E27D1B0069DFF0 /* noArt.png in Resources */ = {isa = PBXBuildFile; fileRef = 27580F7A16E27D1B0069DFF0 /* noArt.png */; };
 		27A7834216E266BD0073D074 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A7834116E266BD0073D074 /* UIKit.framework */; };
 		27A7834416E266BD0073D074 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A7834316E266BD0073D074 /* Foundation.framework */; };
 		27A7834616E266BD0073D074 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A7834516E266BD0073D074 /* CoreGraphics.framework */; };
@@ -18,9 +19,11 @@
 		27A7835816E266BD0073D074 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27A7835716E266BD0073D074 /* Default-568h@2x.png */; };
 		27A7835B16E266BD0073D074 /* ICFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A7835A16E266BD0073D074 /* ICFViewController.m */; };
 		27A7835E16E266BD0073D074 /* ICFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A7835C16E266BD0073D074 /* ICFViewController.xib */; };
+		27A7836516E268870073D074 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A7836416E268870073D074 /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27580F7A16E27D1B0069DFF0 /* noArt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noArt.png; sourceTree = "<group>"; };
 		27A7833E16E266BD0073D074 /* player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = player.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A7834116E266BD0073D074 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		27A7834316E266BD0073D074 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,6 +40,7 @@
 		27A7835916E266BD0073D074 /* ICFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICFViewController.h; sourceTree = "<group>"; };
 		27A7835A16E266BD0073D074 /* ICFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICFViewController.m; sourceTree = "<group>"; };
 		27A7835D16E266BD0073D074 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ICFViewController.xib; sourceTree = "<group>"; };
+		27A7836416E268870073D074 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27A7836516E268870073D074 /* MediaPlayer.framework in Frameworks */,
 				27A7834216E266BD0073D074 /* UIKit.framework in Frameworks */,
 				27A7834416E266BD0073D074 /* Foundation.framework in Frameworks */,
 				27A7834616E266BD0073D074 /* CoreGraphics.framework in Frameworks */,
@@ -56,6 +61,7 @@
 		27A7833516E266BD0073D074 = {
 			isa = PBXGroup;
 			children = (
+				27A7836416E268870073D074 /* MediaPlayer.framework */,
 				27A7834716E266BD0073D074 /* player */,
 				27A7834016E266BD0073D074 /* Frameworks */,
 				27A7833F16E266BD0073D074 /* Products */,
@@ -96,6 +102,7 @@
 		27A7834816E266BD0073D074 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				27580F7A16E27D1B0069DFF0 /* noArt.png */,
 				27A7834916E266BD0073D074 /* player-Info.plist */,
 				27A7834A16E266BD0073D074 /* InfoPlist.strings */,
 				27A7834D16E266BD0073D074 /* main.m */,
@@ -164,6 +171,7 @@
 				27A7835616E266BD0073D074 /* Default@2x.png in Resources */,
 				27A7835816E266BD0073D074 /* Default-568h@2x.png in Resources */,
 				27A7835E16E266BD0073D074 /* ICFViewController.xib in Resources */,
+				27580F7B16E27D1B0069DFF0 /* noArt.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +267,11 @@
 		27A7836216E266BD0073D074 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "player/player-Prefix.pch";
 				INFOPLIST_FILE = "player/player-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -270,9 +280,11 @@
 		27A7836316E266BD0073D074 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "player/player-Prefix.pch";
 				INFOPLIST_FILE = "player/player-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -297,6 +309,7 @@
 				27A7836316E266BD0073D074 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
